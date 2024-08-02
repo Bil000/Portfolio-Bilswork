@@ -1,0 +1,441 @@
+:root {
+   --grey: #282b2d;
+   --darkGrey: #18191a;
+}
+
+html {
+   margin-bottom: 20em;
+}
+
+.hyperlink:hover {
+   color: #D7E6FA !important;
+   text-decoration: underline;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+}
+body {
+   background-color: var(--darkGrey);
+   font-family: monospace;
+   color:white;
+   counter-reset: ordinal;
+}
+
+#note {
+   position: fixed;
+   top:0;
+   width: 90%;
+   height: 100vh;
+   background-color: black;
+   opacity: 0.9;
+
+}
+
+#blanktext {
+   font-size: 21px;
+   position: fixed;
+   top:0;
+   width: 90%;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-weight: bolder;
+}
+
+a {
+   text-decoration: none;
+}
+
+#motherContainer {
+   z-index: 2;
+   width: 90%;
+   max-width: 100%;
+   margin: auto;
+}
+
+header {
+   width: 100%;
+   height: 60px;
+   display: flex;
+   justify-content: space-around;
+}
+
+#backgroundContainer {
+  width: 100%;
+}
+
+#contentDivOne {
+   width: 100%;
+   background: 
+    linear-gradient(to bottom, transparent, var(--darkGrey)),
+    linear-gradient(to right, transparent, var(--darkGrey)),
+    linear-gradient(to left, transparent, var(--darkGrey)),
+      url(../public/background_profile.png);
+   background-size: cover;
+}
+
+#contentDivTwo {
+   width: 100%;
+   height: 100vh;
+}
+
+#logo {
+   height: 100%;
+   flex: 3;
+   display: flex;
+   flex-direction: row;
+   position: relative;
+   background-color: var(--darkGrey);
+}
+
+h1 {
+   flex: 3;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+nav {
+   background-color: white;
+   color: var(--grey);
+}
+
+ol {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   height: 100%;
+}
+
+#menu li {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100%;
+   padding-left: 20px;
+   padding-right: 20px;
+}
+#menu li:before {
+   counter-increment: ordinal;
+   content: counter(ordinal)".";
+}
+#menu:hover {
+   background-color: var(--darkGrey);
+   color: white;
+   text-shadow: 1.8px 3px 2px black;
+}
+#menu:hover a {
+   color: white;
+}
+#menu:active a {
+   color: antiquewhite;
+}
+
+#menu a {
+   text-decoration: none;
+   color: var(--grey);
+}
+
+.sharpEdge {
+   position: relative;
+   left: 49.8px;
+   width: 0px;
+   border-right: 50px solid transparent;
+   border-top: 60px solid var(--darkGrey);
+   padding-left: 0;
+}
+
+#introduction {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   padding: 149px 170px 149px 170px;
+   width: 100%;
+   font-style: Impact;
+}
+
+#introduction article {
+   width: 60%;
+}
+#introduction article h2 {
+   font-size: 3.5em;
+   padding: 5px;
+   font-weight: bolder;
+   color:antiquewhite
+}
+#introduction article h3 {
+   font-size: 2.5em;
+   padding: 5px;
+   font-weight: bolder;
+}
+#introduction article p {
+   font-size: 1em;
+   padding: 5px;
+   font-weight: 600;
+}
+
+img {
+   border: 7px double white;
+   border-radius: 7px;
+   width: 320px;
+   height: 320px;
+   box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+#biography {
+   padding: 70px;
+   margin: 145px auto 145px auto;
+   display: flex;
+   justify-content: center;
+   border-style: groove;
+   width: 70%;
+   font-weight: 600;
+}
+#biography div {
+   display: flex;
+   align-items: center;
+   position: relative;
+   right: 140px;
+   transform: rotate(-90deg);
+   font-size: 1.6em;
+}
+#biography a {
+   color: antiquewhite
+}
+
+#experience {
+   padding: 55px 140px 55px 140px;
+   display: flex;
+   justify-content: center;
+}
+
+.workFrame {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   width: 100%;
+   font-weight: 600;
+   opacity: 0.95;
+}
+
+.workFrame article {
+   width: 50em;
+   background-color: #212325;
+   padding: 40px;
+   border-radius: 5%;
+}
+
+.workFrame h2 {
+   font-size:  1.4em;
+}
+.workFrame h3 {
+   font-size:  1.2em;
+}
+
+.workFrame h4 {
+   font-size:  0.95em;
+}
+
+.workFrame a {
+   color: antiquewhite;
+} 
+
+.workFrame a:hover {
+   color: white;
+   border-style: dotted;
+   border-color: white;
+}
+.circleSvg {
+   position: relative;
+   right: 80px;
+   width: 20px;
+   height: 100%;
+   background-color: rgb(231, 217, 200);
+}
+.circleSvg div {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: antiquewhite;
+   color: #18191a;
+   border-radius: 50%;
+   width: 55px;
+   height: 55px;
+   transform: translate(-30%, -0.5rem);
+}
+
+#skills {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   opacity: 0.95;
+   padding-top: 120px;
+   padding-bottom: 120px;
+}
+
+#skills div {
+   display: flex;
+   flex-direction: column;
+   margin: 20px;
+   background-color: #212325;
+}
+#skills h3 {
+   padding: 7px;
+}
+
+#skills ul {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   list-style: none;
+   background-color: white;
+   padding: 5px;
+   margin: 0;
+
+}
+
+#skills li {
+   padding-right: 17px;
+   color: black;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+}
+
+#skills i {
+   font-size: 3em;
+}
+
+span {
+   font-size: 13px;
+}
+
+#skills h2 {
+   width: 100%;
+   text-align: center;
+   font-size: 1.6em;
+}
+
+#skills hr {
+   margin-top: 0.5em;
+   margin-bottom: 0.5em;
+
+}
+
+#frame {
+   width: 60%;
+   max-width: 90%;
+   background-color: transparent !important;
+}
+
+#projects div {
+   margin-top: 50px;
+   width: 100%;
+}
+
+#projects h1 {
+   font-size: 1.6em;
+   width: 100%;
+   display: flex;
+   justify-content: end;
+   padding-right: 40px;
+   border-bottom: double;
+   border-right: double;
+   border-color: #D7E6FA;
+   border-width: 7px;
+}
+#projects h2 {
+   font-size:  1.4em;
+   a {
+      color:antiquewhite;
+   }
+}
+#projects h3 {
+   font-size:  1.2em;
+}
+
+#projects article {
+   width: 50em;
+   max-width: 90%;
+   background-color: #212325;
+   padding: 40px;  
+   box-shadow: -40px -27px 0px rgb(234, 221, 203);
+   opacity: 0.95;
+   border-bottom: double;
+   border-right: double;
+   border-width: 7px;
+   border-bottom-right-radius: 5px;
+   border-top-right-radius: 2px;
+}
+
+#projects div {
+   margin-left: 2.5em;
+   margin-top: 7em;
+   display: flex;
+   flex-direction: column;
+}
+
+footer {
+   width: 50%;
+   margin: auto;
+  text-shadow: #18191a;
+}
+
+footer div {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   padding: 20px;
+}
+
+footer h1 {
+   font-size: 3.5em;
+   padding: 5px;
+   font-weight: bolder;
+   color: antiquewhite;
+}
+
+footer h2 {
+   width: 100%;
+   display: flex;
+   justify-content: end;
+   font-size: 2.5em;
+   padding: 25px;
+   font-weight: bolder;
+   color: #d2d3d3;
+}
+
+footer hr:nth-of-type(2) {
+   width: 80%;
+   margin: 30px auto 0 auto;
+}
+
+footer ul {
+   list-style-type: none;
+   height: 100%;
+   display: flex;
+   justify-content: space-between;
+}
+
+footer li {
+   width: 100%;
+   text-align: center;
+   font-size: 3em;
+}
+
+footer li:hover {
+   text-decoration: underline;
+}
+
+footer a {
+   text-decoration: none;
+   color: #D7E6FA;
+}
+
+footer a:hover {
+   color: #D7E6FA;
+}

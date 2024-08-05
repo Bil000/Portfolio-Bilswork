@@ -19,12 +19,12 @@
       "dest": "back_end/index.js"
     },
     {
-      "src": "/(.*)",
-      "dest": "front_end/index.html"
-    },
-    {
       "src": "/public/(.*)",
       "dest": "/public/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "front_end/$1"
     }
   ]
 }

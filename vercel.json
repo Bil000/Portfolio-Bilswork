@@ -15,19 +15,16 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "front_end/index.html"
-    },
-    {
       "src": "/api/(.*)",
       "dest": "back_end/index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "front_end/index.html"
     },
     {
       "src": "/public/(.*)",
       "dest": "/public/$1"
     }
-  ],
-  "static": {
-    "public": "public"
-  }
+  ]
 }

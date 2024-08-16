@@ -66,7 +66,7 @@ a {
     linear-gradient(to bottom, transparent, var(--darkGrey)),
     linear-gradient(to right, transparent, var(--darkGrey)),
     linear-gradient(to left, transparent, var(--darkGrey)),
-      url(../public/background_profile.png);
+      url(../archive/background_profile.png);
    background-size: cover;
 }
 

@@ -35,7 +35,17 @@ body {
    justify-content: center;
 
 }
-
+#blanktext {
+   font-size: 21px;
+   position: fixed;
+   top:0;
+   width: 90%;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-weight: bolder;
+} 
 
 a {
    text-decoration: none;

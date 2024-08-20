@@ -12,7 +12,9 @@ app.get('/', (req, res) => {
 app.get('/styles/style.css', (req, res) => {
   res.sendFile(path.join(__dirname, '..', '..', 'front_end', 'style.css'));
 });
-
+app.get('/cloud', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'cloudinary.js'));
+});
 app.use((req, res) => {
   res.status(404).send('Not Found');
 });

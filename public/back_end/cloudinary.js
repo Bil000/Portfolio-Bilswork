@@ -1,18 +1,29 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const cloudinary = (url) => {
-        const cloudinary = require('cloudinary').v2;
-        cloudinary.config({
-            cloud_name: "dytmmuosl",
-            secure: true,
-        });
-        url = cloudinary.url("", {
-            transformation: [{
-                fetch_format: "auto",
-                quality: "auto",
-            }]
-        });
-    }
-//rewatch cloudinary tutorial about how to turn image files in ./archive to a compressed an responsive way for any browser and viewport
-//Remember about getting the query method images to pass the compressed images into the srcs from img tags on index.html
+import * as dotenv from "dotenv";
+import status from "statuses";
+dotenv.config();
+import * as cloudinary from "cloudinary"
+
+cloudinary.config({
+    cloud_name: process.env.CLOUDINARY_NAME,
+    secure: true,
+    api_key: process.env.CLOUDINARY_API_KEY,
+    api_secret: process.env.CLOUDINARY_API_SECRET,
 });
-    
+
+export default async function cloudinaryUrlPath (pathUrl)  {
+    try {
+        const uploadResult = await cloudinary.uploader.upload(pathUrl);
+        const url = cloudinary.url(uploadResult.public_id, {
+            transformation: [
+                { quality: "auto", fetch_format: "auto" },
+                { crop: "fill", gravity: "auto" },
+            ],
+
+        });
+        console.log(status(200));
+        return url;
+    } catch (error) {
+        console.log(status(404), error);
+    }
+};
+

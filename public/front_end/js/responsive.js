@@ -19,7 +19,7 @@ const navBar = () => {
         if (window.innerWidth < 800) {
             header.innerHTML = ''; 
             const barsIcon = header.appendChild(document.createElement("i"));  
-            const dropdownMenu = header.appendChild(document.createElement("div"));
+            // const dropdownMenu = header.appendChild(document.createElement("div"));
             function setAttb(el, attb) {
                 for (const key in attb) {
                     el.setAttribute(key, attb[key]);

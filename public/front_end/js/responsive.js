@@ -125,4 +125,5 @@ const navBar = () => {
 };
 
 body();
+body();
 navBar();

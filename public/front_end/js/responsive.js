@@ -19,6 +19,7 @@ function debounce(func, wait) {
 }
 // Helper functions 
 
+
 const body = () => {
     function resizeBodyWidth() {
         const bodyElement = document.querySelector("body");

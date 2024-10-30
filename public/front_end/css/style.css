@@ -84,6 +84,7 @@ nav {
    color: var(--grey);
 }
 
+
 ol {
    display: flex;
    flex-direction: row;

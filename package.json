@@ -4,15 +4,15 @@
   "description": "��#\u0000 \u0000P\u0000o\u0000r\u0000t\u0000f\u0000o\u0000l\u0000i\u0000o\u0000-\u0000B\u0000i\u0000l\u0000s\u0000w\u0000o\u0000r\u0000k\u0000\r\u0000 \u0000",
   "main": "public/back_end/api/index.js",
   "dependencies": {
-    "@vercel/blob": "^0.23.4",
     "autoprefixer": "^10.4.20",
-    "cloudinary": "^2.5.0",
+    "cloudinary": "^2.5.1",
     "dotenv": "^16.4.5",
-    "express": "^4.21.0",
+    "express": "^4.21.1",
     "jquery": "^3.7.1",
     "postcss": "^8.4.47",
     "postcss-cli": "^11.0.0",
-    "tailwindcss": "^3.4.13"
+    "tailwindcss": "^3.4.13",
+    "vercel": "^32.3.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

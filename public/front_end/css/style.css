@@ -5,6 +5,7 @@
 
 html {
    margin-bottom: 20em;
+   width: 100%;
 }
 
 .hyperlink:hover {
@@ -20,7 +21,9 @@ body {
    background-color: var(--darkGrey);
    font-family: monospace;
    color:white;
-   counter-reset: ordinal;}
+   counter-reset: ordinal;
+}
+   
 
 #note {
    position: fixed;
@@ -94,26 +97,35 @@ header {
    height: 60px;
    display: flex;
    justify-content: space-around;
-}
-header h1 {
-   font-size: 2em;
-}
-#logo {
-   height: 100%;
-   flex: 3;
-   display: flex;
    flex-direction: row;
    position: relative;
    background-color: var(--darkGrey);
 }
-
+#logo {
+   font-size: 2em;
+   width: 10vw;
+   background-color: var(--darkGrey);
+}
+#attached_element {
+   position: relative;
+   left: 0 ;
+   bottom: 0; 
+   width: 50px;
+   height: 50px;
+   border-right: 50px solid transparent;
+   border-top: 60px solid var(--darkGrey);
+}
+#menu {
+   display: flex;
+   flex-direction: row;
+   background-color: white;
+}
 #menu li {
    display: flex;
    align-items: center;
    justify-content: center;
    height: 100%;
-   padding-left: 1.5vw;
-   padding-right: 1.5vw;
+   padding: 1vw
    
 }
 #menu li:before {
@@ -122,10 +134,17 @@ header h1 {
    font-size: 0.9em;
 }
 #menu:hover {
+   nav {
+      background-color: var(--darkGrey);
+   }
+   li:before {
+      color: white;
+   }
    background-color: var(--darkGrey);
    color: white;
    text-shadow: 1.8px 3px 2px black;
 }
+
 #menu a {
    font-size: 0.9em;
    text-decoration: none;
@@ -138,20 +157,10 @@ header h1 {
    color: antiquewhite;
 }
 
-.sharpEdge {
-   position: relative;
-   left: 49.8px;
-   width: 0px;
-   border-right: 50px solid transparent;
-   border-top: 60px solid var(--darkGrey);
-   padding-left: 0;
-}
-
 #introduction {
    display: flex;
    flex-direction: row;
    justify-content: space-between;
-   padding: 149px 170px 149px 170px;
    width: 100%;
    font-style: Impact;
 }
@@ -162,18 +171,15 @@ header h1 {
 }
 #introduction article h2 {
    font-size: 3.5em;
-   padding: 5px;
    font-weight: bolder;
    color:antiquewhite
 }
 #introduction article h3 {
    font-size: 2.5em;
-   padding: 5px;
    font-weight: bolder;
 }
 #introduction article p {
    font-size: 1em;
-   padding: 5px;
    font-weight: 600;
 }
 #introduction article div {
@@ -182,13 +188,11 @@ header h1 {
    width: 100%;
 }
 #introduction a {
-   margin-top: 0.5em !important;
    border: groove 2px antiquewhite;
    border-radius: 3px;
    width: 30%;
    color: antiquewhite;
    font-weight: 600;
-   padding: 20px;
 }
 #introduction a:hover {
    background-color: rgb(225, 188, 139);
@@ -203,9 +207,7 @@ img {
    box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-#biography {
-   padding: 70px;
-   margin: 145px auto 145px auto;
+#biography {   
    display: flex;
    justify-content: center;
    border-style: groove;
@@ -225,7 +227,6 @@ img {
 }
 
 #experience {
-   padding: 55px 140px 55px 140px;
    display: flex;
    justify-content: center;
 }
@@ -242,7 +243,6 @@ img {
 .workFrame article {
    width: 50em;
    background-color: #212325;
-   padding: 40px;
    border-radius: 5%;
 }
 
@@ -291,33 +291,24 @@ img {
    flex-direction: column;
    align-items: center;
    opacity: 0.95;
-   padding-top: 120px;
-   padding-bottom: 120px;
 }
 
 #skills div {
    display: flex;
    flex-direction: column;
-   margin: 20px;
    background-color: #212325;
 }
-#skills h3 {
-   padding: 7px;
-}
-
 #skills ul {
    display: flex;
    flex-direction: row;
    justify-content: space-around;
    list-style: none;
    background-color: white;
-   padding: 5px;
-   margin: 0;
 
 }
 
 #skills li {
-   padding-right: 17px;
+ 
    color: black;
    display: flex;
    flex-direction: column;
@@ -351,7 +342,6 @@ span {
 }
 
 #projects div {
-   margin-top: 50px;
    width: 100%;
 }
 
@@ -360,7 +350,6 @@ span {
    width: 100%;
    display: flex;
    justify-content: end;
-   padding-right: 40px;
    border-bottom: double;
    border-right: double;
    border-color: #D7E6FA;
@@ -391,15 +380,12 @@ span {
 }
 
 #projects div {
-   margin-left: 2.5em;
-   margin-top: 7em;
    display: flex;
    flex-direction: column;
 }
 
 footer {
    width: 50%;
-   margin: auto;
   text-shadow: #18191a;
 }
 
@@ -407,12 +393,10 @@ footer div {
    display: flex;
    flex-direction: column;
    justify-content: space-evenly;
-   padding: 20px;
 }
 
 footer h1 {
    font-size: 3.5em;
-   padding: 5px;
    font-weight: bolder;
    color: antiquewhite;
 }
@@ -422,14 +406,12 @@ footer h2 {
    display: flex;
    justify-content: end;
    font-size: 2.5em;
-   padding: 25px;
    font-weight: bolder;
    color: #d2d3d3;
 }
 
 footer hr:nth-of-type(2) {
    width: 80%;
-   margin: 30px auto 0 auto;
 }
 
 footer ul {
@@ -493,6 +475,5 @@ footer a:hover {
 }
 
 #bars {
-   padding: 20px; 
    font-size: 24px
 }

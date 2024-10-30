@@ -24,8 +24,7 @@ const behaviors = {
     },  
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    behaviors.scrollToTarget();
-})
+behaviors.scrollToTarget();
+
 
 
